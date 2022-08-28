@@ -5,8 +5,9 @@
 
 ## Feature
 - example
-|hitting_accuracy|takedown_accuracy|critical_hit_blow|critical_absorption_strike|average_takedown|average_submission|critical_hit_defense|takedown_defense|average_knockdown|age|height|weight|reach|leg_reach|
+|hitting_accuracy|takedown_accuracy|critical_hit_blow|critical_absorption_strike|average_takedown|average_submission|critical_hit_defense|takedown_defense|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|57.0|37.0|6.79|3.53|1.71|0.22|60.0|73.0|0.37|33.0|167.64|65.53|181.61|91.44|
 
 ## Model
 - model structure
