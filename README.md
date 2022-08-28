@@ -15,6 +15,17 @@
 - loss(train, test) graph
 ![graph](https://user-images.githubusercontent.com/71556009/187060925-71a84cb7-31db-47a9-be64-e05080a9fdbc.PNG)
 
+## Predict
+> Francis Ngannou vs Alexander Volkov
+>> first win : 98%, second win : 0.02%
+
+> Alexander Volkanovski vs Chan Sung Jung
+>> first win : 99%, second win : 0.01% 
+
+> Israel Adesanya vs Darren Till
+>> first win : 99%, second win : 0.01%
+
+
 ## More
 - 본 model 은 오직 선수들의 외적 데이터를 통해 경기 결과를 예측하므로 예상하지 못하는 변수(에드워즈 헤드킥같은 상황) 는 고려하지 못한다.
 - over fitting 이 어김없이 일어났지만 기존의 경기 결과와 새로운 예측에 대해서 비교적 좋게 나타난다.

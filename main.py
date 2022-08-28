@@ -17,6 +17,14 @@ predict_input = np.array([
     [
         searcher.get_info_list("Francis Ngannou"),
         searcher.get_info_list("Alexander Volkov")
+    ],
+    [
+        searcher.get_info_list("Alexander Volkanovski"),
+        searcher.get_info_list("Chan Sung Jung")
+    ],
+    [
+        searcher.get_info_list("Israel Adesanya"),
+        searcher.get_info_list("Darren Till")
     ]
 ])
 
