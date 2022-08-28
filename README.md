@@ -16,7 +16,7 @@
 ![graph](https://user-images.githubusercontent.com/71556009/187060925-71a84cb7-31db-47a9-be64-e05080a9fdbc.PNG)
 
 ## More
-- age, height, weight etc.. 의 14개 features 를 사용했다.
+- 본 model 은 오직 선수들의 외적 데이터를 통해 경기 결과를 예측하므로 예상하지 못하는 변수(에드워즈 헤드킥같은 상황) 는 고려하지 못한다.
 - over fitting 이 어김없이 일어났지만 기존의 경기 결과와 새로운 예측에 대해서 비교적 좋게 나타난다.
 - 딥러닝을 다시 공부하기 시작한 후, 2번째 offical project 이며 개인적으로 만족스럽다. ^^
 
