@@ -5,10 +5,10 @@ import numpy as np
 import pickle
 
 # load model
-model = keras.models.load_model("./best_model.h5")
+model = keras.models.load_model("./model/best_model.h5")
 scaler_list = []
 
-with open("./scaler.pickle", "rb") as fp :
+with open("./model/scaler.pickle", "rb") as fp :
     scaler_list = pickle.load(fp)
 
 searcher = Searcher()
