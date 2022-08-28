@@ -8,7 +8,7 @@
 ![model](https://user-images.githubusercontent.com/71556009/187060585-891722c1-0ffd-452e-9c12-40cafa3babd8.PNG)
 
 - loss(train, text) graph
-![Figure_1](https://user-images.githubusercontent.com/71556009/187060666-ba37cfb9-657f-4962-997c-3bb03b0d6310.png)
+![graph](https://user-images.githubusercontent.com/71556009/187060925-71a84cb7-31db-47a9-be64-e05080a9fdbc.PNG)
 
 ## More
 - age, height, weight etc.. 의 14개 features 를 사용했다.
