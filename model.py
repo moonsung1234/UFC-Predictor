@@ -6,6 +6,7 @@ from tensorflow.keras.layers import *
 from tensorflow.keras import *
 import matplotlib.pyplot as plt
 import numpy as np
+import pickle
 import json
 
 data = None
@@ -13,13 +14,17 @@ data = None
 with open("./data.json", "r") as fp :
     data = json.load(fp)
 
-data = np.array(data)
+data1 = np.array(data)
+data2 = np.copy(data1)
 
-train_x = np.array(data[:, 1:].tolist())
-train_x[:int(train_x.shape[0] / 2)] = train_x[:int(train_x.shape[0] / 2), ::-1]
+train_x1 = np.array(data1[:, 1:].tolist())
+train_t1 = np.array([1, 0] * train_x1.shape[0]).reshape(train_x1.shape[0], 2)
 
-train_t = np.array([1, 0] * train_x.shape[0]).reshape(train_x.shape[0], 2)
-train_t[:int(train_t.shape[0] / 2)] = train_t[:int(train_t.shape[0] / 2), ::-1]
+train_x2 = np.array(data2[:, 1:].tolist())[:, ::-1]
+train_t2 = np.array([0, 1] * train_x2.shape[0]).reshape(train_x2.shape[0], 2)
+
+train_x = np.concatenate((train_x1, train_x2), axis=0)
+train_t = np.concatenate((train_t1, train_t2), axis=0)
 
 scaler_list = []
 
@@ -48,8 +53,9 @@ dense22 = Dense(10, activation="relu")(dense21)
 concatenated = concatenate([dense11, dense22])
 
 # output
-dense = Dense(10, activation="relu")(concatenated)
-output = Dense(2, activation="softmax")(dense)
+dense1 = Dense(100, activation="relu")(concatenated)
+dense2 = Dense(10, activation="relu")(dense1)
+output = Dense(2, activation="softmax")(dense2)
 
 # model
 model = Model([input1, input2], output)
@@ -59,7 +65,8 @@ model.compile(
     metrics=["accuracy"]
 )
 
-check_point = ModelCheckpoint("./best_model.h5")
+check_point = ModelCheckpoint("./best_model.h5", monitor="val_loss")
+# early_stopping = EarlyStopping(monitor="val_loss", verbose=1, patience=20)
 
 model.summary()
 
@@ -71,6 +78,9 @@ history = model.fit(
     validation_data=([test_input[:, 0], test_input[:, 1]], test_target),
     callbacks=[check_point]  
 )
+
+with open("./scaler.pickle", "wb") as fp :
+    pickle.dump(scaler_list, fp)
 
 plt.plot(history.history["loss"])
 plt.plot(history.history["val_loss"])
