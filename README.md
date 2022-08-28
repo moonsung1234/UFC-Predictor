@@ -7,8 +7,6 @@
 - model structure
 ![model](https://user-images.githubusercontent.com/71556009/187060585-891722c1-0ffd-452e-9c12-40cafa3babd8.PNG)
 
-<br/>
-
 - loss(train, text) graph
 ![Figure_1](https://user-images.githubusercontent.com/71556009/187060666-ba37cfb9-657f-4962-997c-3bb03b0d6310.png)
 

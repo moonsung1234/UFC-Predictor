@@ -65,7 +65,7 @@ model.compile(
     metrics=["accuracy"]
 )
 
-check_point = ModelCheckpoint("./best_model.h5", monitor="val_loss")
+check_point = ModelCheckpoint("./model/best_model.h5", monitor="val_loss")
 # early_stopping = EarlyStopping(monitor="val_loss", verbose=1, patience=20)
 
 model.summary()
