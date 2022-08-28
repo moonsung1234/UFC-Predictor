@@ -16,14 +16,14 @@
 ![graph](https://user-images.githubusercontent.com/71556009/187060925-71a84cb7-31db-47a9-be64-e05080a9fdbc.PNG)
 
 ## Predict
-> Francis Ngannou vs Alexander Volkov
->> first win : 98%, second win : 0.02%
+#### Francis Ngannou vs Alexander Volkov
+> 98% vs 0.02%
 
-> Alexander Volkanovski vs Chan Sung Jung
->> first win : 99%, second win : 0.01% 
+#### Alexander Volkanovski vs Chan Sung Jung
+> 99% vs 0.01% 
 
-> Israel Adesanya vs Darren Till
->> first win : 99%, second win : 0.01%
+#### Israel Adesanya vs Darren Till
+> 99% vs 0.01%
 
 
 ## More
