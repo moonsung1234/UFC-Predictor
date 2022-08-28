@@ -11,7 +11,7 @@ import json
 
 data = None
 
-with open("./data.json", "r") as fp :
+with open("./data/data.json", "r") as fp :
     data = json.load(fp)
 
 data1 = np.array(data)
@@ -79,7 +79,7 @@ history = model.fit(
     callbacks=[check_point]  
 )
 
-with open("./scaler.pickle", "wb") as fp :
+with open("./model/scaler.pickle", "wb") as fp :
     pickle.dump(scaler_list, fp)
 
 plt.plot(history.history["loss"])
